@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        /* Adding some basic styles for the header, main title, and footer */
+        h1 {
+            text-align: center;
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;  /* Centering the content of main section */
+        }
+        .main-title {
+            font-size: 48px;     /* Making the title larger */
+            margin-bottom: 20px; /* Adding some space below the title */
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1 class="main-title">Age Calculator</h1>
+    <form action="/" method="POST">
+        Enter your birth year: <input type="number" name="birth_year" required><br>
+        Enter your birth month (1-12): <input type="number" name="birth_month" min="1" max="12" required><br>
+        Enter your birth date (1-31): <input type="number" name="birth_date" min="1" max="31" required><br>
+        <input type="submit" value="Calculate Age">
+    </form>
+
+    {% if age is not none %}
+        <p>Your age is: {{ age }} years.</p>
+    {% endif %}
+</main>
+
+<footer>
+    Developed by Lexie Wang
+</footer>
+
+</body>
+</html>
+
